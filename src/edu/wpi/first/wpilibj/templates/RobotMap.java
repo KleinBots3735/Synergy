@@ -37,15 +37,15 @@ public class RobotMap {
 
         
 //COMPONENTS ON DRIVER STATION LAPTOP
-    public static Joystick pilotStick = new Joystick(PILOTSTICK_PORT);
-    public static Joystick coPilotStick = new Joystick(COPILOTSTICK_PORT);
+    public static Joystick pilotStick = new Joystick(PILOTSTICK_PORT);     //Saitek P880
+    public static Joystick coPilotStick = new Joystick(COPILOTSTICK_PORT); //Logitech F310
     
 //COMPONENTS ON ROBOT
-    public static Talon frontLeftMotor = new Talon(FRONTLEFTMOTOR_PORT);   //PWM #1
-    public static Talon frontRightMotor = new Talon(FRONTRIGHTMOTOR_PORT);  //PWM #2
-    public static Talon rearLeftMotor = new Talon(REARLEFTMOTOR_PORT);    //PWM #3
-    public static Talon rearRightMotor = new Talon(REARRIGHTMOTOR_PORT);   //PWM #4
-    public static Talon armMotor = new Talon(ARMMOTOR_PORT);   //PWM #4
+    public static Talon frontLeftMotor = new Talon(FRONTLEFTMOTOR_PORT);   
+    public static Talon frontRightMotor = new Talon(FRONTRIGHTMOTOR_PORT); 
+    public static Talon rearLeftMotor = new Talon(REARLEFTMOTOR_PORT);     
+    public static Talon rearRightMotor = new Talon(REARRIGHTMOTOR_PORT);   
+    public static Talon armMotor = new Talon(ARMMOTOR_PORT);   
     
     public static Compressor compressor = new Compressor(PRESSURESWITCH_PORT,COMPRESSORSPIKE_PORT);
     
