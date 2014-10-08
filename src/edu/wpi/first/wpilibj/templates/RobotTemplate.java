@@ -33,6 +33,7 @@ public class RobotTemplate extends IterativeRobot {
         // instantiate the command used for the autonomous period
         // Initialize all subsystems
         CommandBase.init();
+        RobotMap.compressor.start();
     }
 
     public void autonomousInit() {

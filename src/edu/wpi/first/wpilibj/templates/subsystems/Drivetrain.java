@@ -30,4 +30,36 @@ public class Drivetrain extends Subsystem {
     {
         RobotMap.shifterSolenoid.set(false);
     }
+    public static double getLeftEncoder()
+    {
+        return RobotMap.leftEncoder.get();
+    }
+    public static void startLeftEncoder()
+    {
+        RobotMap.leftEncoder.start();
+    }
+    public static void stopLeftEncoder()
+    {
+        RobotMap.leftEncoder.stop();
+    }
+    public static void resetLeftEncoder()
+    {
+        RobotMap.leftEncoder.reset();
+    }
+    public static double getRightEncoder()
+    {
+        return RobotMap.rightEncoder.get();
+    }
+    public static void startRightEncoder()
+    {
+        RobotMap.rightEncoder.start();
+    }
+    public static void stopRightEncoder()
+    {
+        RobotMap.rightEncoder.stop();
+    }
+    public static void resetRightEncoder()
+    {
+        RobotMap.rightEncoder.reset();
+    }
 }
