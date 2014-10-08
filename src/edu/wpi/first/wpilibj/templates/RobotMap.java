@@ -49,6 +49,6 @@ public class RobotMap {
     
     public static Compressor compressor = new Compressor(PRESSURESWITCH_PORT,COMPRESSORSPIKE_PORT);
     
-    public static Solenoid arm = new Solenoid(ARMSOLENOID_PORT);
-    public static Solenoid shifter = new Solenoid(SHIFTERSOLENOID_PORT);
+    public static Solenoid armSolenoid = new Solenoid(ARMSOLENOID_PORT);
+    public static Solenoid shifterSolenoid = new Solenoid(SHIFTERSOLENOID_PORT);
 }

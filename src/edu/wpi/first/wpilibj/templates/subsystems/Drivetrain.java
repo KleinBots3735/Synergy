@@ -15,6 +15,7 @@ import edu.wpi.first.wpilibj.templates.RobotMap;
  */
 public class Drivetrain extends Subsystem {
     public static RobotDrive drive = new RobotDrive(RobotMap.frontLeftMotor,RobotMap.rearLeftMotor,RobotMap.frontRightMotor,RobotMap.rearRightMotor);
+    
     public void initDefaultCommand() {
     }
     public static void move(double y, double x)
@@ -23,10 +24,10 @@ public class Drivetrain extends Subsystem {
     }
     public static void shiftUp()
     {
-        RobotMap.shifter.set(true);
+        RobotMap.shifterSolenoid.set(true);
     }
     public static void shiftDown()
     {
-        RobotMap.shifter.set(false);
+        RobotMap.shifterSolenoid.set(false);
     }
 }
