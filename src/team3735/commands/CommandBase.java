@@ -1,10 +1,10 @@
-package edu.wpi.first.wpilibj.templates.commands;
+package team3735.commands;
 
 import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
-import edu.wpi.first.wpilibj.templates.OI;
-import edu.wpi.first.wpilibj.templates.subsystems.Arm;
-import edu.wpi.first.wpilibj.templates.subsystems.Drivetrain;
+import team3735.templates.OI;
+import team3735.subsystems.Arm;
+import team3735.subsystems.Drivetrain;
 
 /**
  * The base for all commands. All atomic commands should subclass CommandBase.

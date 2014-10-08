@@ -3,19 +3,16 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package edu.wpi.first.wpilibj.templates.commands;
-
-import edu.wpi.first.wpilibj.templates.OI;
-import edu.wpi.first.wpilibj.templates.subsystems.Drivetrain;
+package team3735.commands;
 
 /**
  *
  * @author S504652
  */
-public class driveWithJoy extends CommandBase {
+public class intakeBall extends CommandBase {
     
-    public driveWithJoy() {
-        requires(drivetrain);
+    public intakeBall() {
+        requires(arm);
     }
 
     // Called just before this Command runs the first time
@@ -24,7 +21,7 @@ public class driveWithJoy extends CommandBase {
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
-        Drivetrain.move(OI.getPilotStickY(), OI.getPilotStickX());
+        arm.eatBall();
     }
 
     // Make this return true when this Command no longer needs to run execute()

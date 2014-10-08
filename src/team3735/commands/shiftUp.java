@@ -3,25 +3,27 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package edu.wpi.first.wpilibj.templates.commands;
+package team3735.commands;
+
+import team3735.subsystems.Drivetrain;
 
 /**
  *
  * @author S504652
  */
-public class intakeBall extends CommandBase {
+public class shiftUp extends CommandBase {
     
-    public intakeBall() {
-        requires(arm);
+    public shiftUp() {
+        requires(drivetrain);
     }
 
     // Called just before this Command runs the first time
     protected void initialize() {
+        Drivetrain.shiftUp();
     }
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
-        arm.eatBall();
     }
 
     // Make this return true when this Command no longer needs to run execute()

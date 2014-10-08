@@ -1,4 +1,4 @@
-package edu.wpi.first.wpilibj.templates;
+package team3735.templates;
 
 import edu.wpi.first.wpilibj.Compressor;
 import edu.wpi.first.wpilibj.CounterBase;
