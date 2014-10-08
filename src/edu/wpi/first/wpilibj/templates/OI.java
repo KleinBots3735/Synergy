@@ -32,5 +32,17 @@ public class OI {
     public static JoystickButton coPilotEleven = new JoystickButton(RobotMap.coPilotStick,11);
     public static JoystickButton coPilotTwelve = new JoystickButton(RobotMap.coPilotStick,12);
     
+    public static double getPilotStickX()
+    {
+        return RobotMap.pilotStick.getX();
+    }
+    public static double getPilotStickY()
+    {
+        return RobotMap.pilotStick.getY();
+    }
+    public static double getPilotStickZ()
+    {
+        return RobotMap.pilotStick.getZ();
+    }
 }
 
