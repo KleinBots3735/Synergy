@@ -5,6 +5,7 @@
  */
 package team3735.subsystems;
 
+import edu.wpi.first.wpilibj.Relay;
 import edu.wpi.first.wpilibj.command.Subsystem;
 import team3735.templates.RobotMap;
 
@@ -18,11 +19,11 @@ public class Arm extends Subsystem {
     }
     public void armUp()
     {
-        RobotMap.armSolenoid.set(true);
+        RobotMap.armSolenoid.set(Relay.Value.kForward);
     }
     public void armDown()
     {
-        RobotMap.armSolenoid.set(false);
+        RobotMap.armSolenoid.set(Relay.Value.kReverse);
     }
     public void eatBall()
     {
@@ -31,5 +32,9 @@ public class Arm extends Subsystem {
     public void spitBall()
     {
         RobotMap.armMotor.set(1);
+    }
+    public void stopBall()
+    {
+        RobotMap.armMotor.set(0);
     }
 }

@@ -13,6 +13,7 @@ import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.livewindow.LiveWindow;
 import team3735.commands.CommandBase;
+import team3735.commands.auto;
 
 /**
  * The VM is configured to automatically run this class, and to call the
@@ -34,6 +35,7 @@ public class Synergy extends IterativeRobot {
         // Initialize all subsystems
         CommandBase.init();
         RobotMap.compressor.start();
+        autonomousCommand = new auto();
     }
 
     public void autonomousInit() {

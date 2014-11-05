@@ -4,26 +4,25 @@
  * and open the template in the editor.
  */
 package team3735.commands;
-
 import team3735.subsystems.Drivetrain;
 
 /**
  *
- * @author S504652
+ * @author s504652
  */
-public class shiftUp extends CommandBase {
+public class auto extends CommandBase {
     
-    public shiftUp() {
+    public auto() {
         requires(drivetrain);
     }
 
     // Called just before this Command runs the first time
     protected void initialize() {
-        Drivetrain.highGear();
     }
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
+        Drivetrain.move(1, 0);
     }
 
     // Make this return true when this Command no longer needs to run execute()

@@ -5,6 +5,7 @@
  */
 package team3735.subsystems;
 
+import edu.wpi.first.wpilibj.Relay;
 import edu.wpi.first.wpilibj.RobotDrive;
 import edu.wpi.first.wpilibj.command.Subsystem;
 import team3735.templates.RobotMap;
@@ -14,7 +15,7 @@ import team3735.templates.RobotMap;
  * @author S504652
  */
 public class Drivetrain extends Subsystem {
-    public static RobotDrive drive = new RobotDrive(RobotMap.frontLeftMotor,RobotMap.rearLeftMotor,RobotMap.frontRightMotor,RobotMap.rearRightMotor);
+    public static RobotDrive drive = new RobotDrive(RobotMap.LeftMotors,RobotMap.RightMotors);
     
     public void initDefaultCommand() {
     }
@@ -22,44 +23,12 @@ public class Drivetrain extends Subsystem {
     {
         drive.arcadeDrive(y,x);
     }
-    public static void shiftUp()
+    public static void highGear()
     {
-        RobotMap.shifterSolenoid.set(true);
+        RobotMap.shifterSolenoid.set(Relay.Value.kForward);
     }
-    public static void shiftDown()
+    public static void lowGear()
     {
-        RobotMap.shifterSolenoid.set(false);
-    }
-    public static double getLeftEncoder()
-    {
-        return RobotMap.leftEncoder.get();
-    }
-    public static void startLeftEncoder()
-    {
-        RobotMap.leftEncoder.start();
-    }
-    public static void stopLeftEncoder()
-    {
-        RobotMap.leftEncoder.stop();
-    }
-    public static void resetLeftEncoder()
-    {
-        RobotMap.leftEncoder.reset();
-    }
-    public static double getRightEncoder()
-    {
-        return RobotMap.rightEncoder.get();
-    }
-    public static void startRightEncoder()
-    {
-        RobotMap.rightEncoder.start();
-    }
-    public static void stopRightEncoder()
-    {
-        RobotMap.rightEncoder.stop();
-    }
-    public static void resetRightEncoder()
-    {
-        RobotMap.rightEncoder.reset();
+        RobotMap.shifterSolenoid.set(Relay.Value.kReverse);
     }
 }

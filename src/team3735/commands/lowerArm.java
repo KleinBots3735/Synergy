@@ -5,25 +5,24 @@
  */
 package team3735.commands;
 
-import team3735.subsystems.Drivetrain;
-
 /**
  *
- * @author S504652
+ * @author s504652
  */
-public class shiftUp extends CommandBase {
+public class lowerArm extends CommandBase {
     
-    public shiftUp() {
-        requires(drivetrain);
+    public lowerArm() {
+        // Use requires() here to declare subsystem dependencies
+        // eg. requires(chassis);
     }
 
     // Called just before this Command runs the first time
     protected void initialize() {
-        Drivetrain.highGear();
     }
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
+        arm.armDown();
     }
 
     // Make this return true when this Command no longer needs to run execute()

@@ -5,6 +5,8 @@ import edu.wpi.first.wpilibj.buttons.Button;
 import edu.wpi.first.wpilibj.buttons.JoystickButton;
 import team3735.commands.intakeBall;
 import team3735.commands.releaseBall;
+import team3735.commands.shiftDown;
+import team3735.commands.shiftUp;
 
 /**
  * This class is the glue that binds the controls on the physical operator
@@ -37,6 +39,9 @@ public class OI {
     
     public OI()
     {
+        pilotSeven.whileActive(new shiftDown());
+        pilotEight.whileActive(new shiftUp());
+        
         coPilotOne.whileHeld(new intakeBall());
         coPilotTwo.whileHeld(new releaseBall()); 
     }
